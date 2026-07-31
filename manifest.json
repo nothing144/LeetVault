@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "LeetVault",
+  "version": "1.0.0",
+  "description": "Automatically sync your LeetCode solutions to GitHub.",
+  "permissions": [
+    "storage",
+    "identity",
+    "notifications"
+  ],
+  "host_permissions": [
+    "https://api.github.com/*",
+    "*://*.leetcode.com/*"
+  ],
+  "background": {
+    "service_worker": "src/background/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.leetcode.com/*"
+      ],
+      "js": [
+        "src/leetcode/parser.js",
+        "src/leetcode/graphql.js",
+        "src/utils/html-to-md.js",
+        "src/content/content.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/leetcode/parser.js",
+        "src/leetcode/network.js"
+      ],
+      "matches": [
+        "*://*.leetcode.com/*"
+      ]
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_title": "LeetVault"
+  },
+  "icons": {
+    "16": "src/assets/icons/icon16.png",
+    "48": "src/assets/icons/icon48.png",
+    "128": "src/assets/icons/icon128.png"
+  }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LeetVault Settings</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+        <h1>LeetVault</h1>
+      </div>
+      <p class="subtitle">Sync your LeetCode solutions</p>
+    </header>
+
+    <main id="dashboard-view">
+      <div class="card">
+        <div class="card-header">
+          <h3>GitHub Connection</h3>
+          <span id="connection-badge" class="badge offline">Disconnected</span>
+        </div>
+        <div class="card-body">
+          <div class="info-row">
+            <span class="info-label">User</span>
+            <span id="dash-username" class="info-value">Not configured</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Repo</span>
+            <span id="dash-repo" class="info-value">Not configured</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card status-card">
+        <div class="card-header">
+          <h3>Extension Status</h3>
+          <span id="extension-status" class="badge">Ready</span>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-label">Current Streak</span>
+          <span id="dash-streak" class="stat-value">Coming Soon</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Problems Synced</span>
+          <span id="dash-synced" class="stat-value">--</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Last Sync</span>
+          <span id="dash-last-sync" class="stat-value">--</span>
+        </div>
+      </div>
+
+      <div class="quick-actions">
+        <button id="open-repo-btn" class="action-btn" disabled>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          Open Repository
+        </button>
+        <button id="open-settings-btn" class="action-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          Settings
+        </button>
+      </div>
+    </main>
+
+    <main id="settings-view" class="hidden">
+      <div class="form-group">
+        <label for="github-username">GitHub Username</label>
+        <input type="text" id="github-username" placeholder="e.g. octocat" autocomplete="off" spellcheck="false">
+      </div>
+
+      <div class="form-group">
+        <label for="github-token">Personal Access Token</label>
+        <input type="password" id="github-token" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" autocomplete="off" spellcheck="false">
+      </div>
+
+      <div class="form-group">
+        <label for="repo-name">Repository Name</label>
+        <input type="text" id="repo-name" placeholder="e.g. LeetCode-Solutions" autocomplete="off" spellcheck="false">
+      </div>
+      <button id="refresh-stats-btn" class="secondary-btn" style="margin-top: 12px; margin-bottom: 4px;">Refresh Repository Stats</button>
+
+      <div class="settings-actions">
+        <button id="back-btn" class="secondary-btn">Cancel</button>
+        <button id="save-btn" class="primary-btn">Save</button>
+      </div>
+      
+      <div id="status-label" class="status hidden"></div>
+    </main>
+
+    <footer>
+      <span>LeetVault v1.0.0</span>
+    </footer>
+  </div>
+  <script src="../utils/github-api.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

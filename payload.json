@@ -1,0 +1,4 @@
+{
+  "query": "query questionTitle($titleSlug: String!) { question(titleSlug: $titleSlug) { title difficulty topicTags { name } } }",
+  "variables": { "titleSlug": "two-sum" }
+}
