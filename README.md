@@ -34,7 +34,7 @@ Stop copying and pasting code manually. Let LeetVault handle it instantly in the
 
 | Dashboard View | Settings Configuration | Output Repository |
 | :---: | :---: | :---: |
-| ![Dashboard Placeholder](https://via.placeholder.com/250x350.png?text=Dashboard) | ![Settings Placeholder](https://via.placeholder.com/250x350.png?text=Settings) | ![GitHub Placeholder](https://via.placeholder.com/250x350.png?text=Repo+Output) |
+| <img src="src/assets/screenshots/dashboard.png" alt="Dashboard View" width="250"> | ![Settings Placeholder](https://via.placeholder.com/250x350.png?text=Settings) | ![GitHub Placeholder](https://via.placeholder.com/250x350.png?text=Repo+Output) |
 
 ---
 
