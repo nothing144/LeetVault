@@ -30,11 +30,9 @@ Stop copying and pasting code manually. Let LeetVault handle it instantly in the
 
 ## 📸 Screenshots
 
-*(Replace placeholders with actual images before Web Store publication)*
-
-| Dashboard View | Settings Configuration | Output Repository |
+| Dashboard View | Settings Configuration | Folder Structure |
 | :---: | :---: | :---: |
-| <img src="src/assets/screenshots/dashboard.png" alt="Dashboard View" width="250"> | <img src="src/assets/screenshots/settings.png" alt="Settings Configuration" width="250"> | ![GitHub Placeholder](https://via.placeholder.com/250x350.png?text=Repo+Output) |
+| <img src="src/assets/screenshots/dashboard.png" alt="Dashboard View" width="250"> | <img src="src/assets/screenshots/settings.png" alt="Settings Configuration" width="250"> | <img src="src/assets/screenshots/folder-structure.png" alt="Folder Structure" width="250"> |
 
 ---
 
