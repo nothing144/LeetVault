@@ -56,10 +56,14 @@ LeetVault relies on Chrome Manifest V3 standards:
 4. Click **Load unpacked** and select the `LeetVault` directory.
 
 ### 2. Configure GitHub
-1. Create a new GitHub repository (e.g., `LeetCode-Solutions`).
-2. Generate a Personal Access Token (Classic or Fine-Grained) with `repo` permissions.
+
+1. Create a new GitHub repository (e.g., `LeetCode`).
+2. Generate a **Fine-grained Personal Access Token** with the following permissions:
+   - **Repository access:** Only select repositories (or your LeetCode repository)
+   - **Repository permissions:**
+     - **Contents:** Read and Write ✅
 3. Open the LeetVault extension popup.
-4. Enter your GitHub Username, Token, and Repository Name.
+4. Enter your GitHub Username, Personal Access Token, and Repository Name.
 5. Click **Save**.
 
 ---
