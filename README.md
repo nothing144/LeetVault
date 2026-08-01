@@ -55,16 +55,81 @@ LeetVault relies on Chrome Manifest V3 standards:
 3. Enable **Developer mode** in the top right.
 4. Click **Load unpacked** and select the `LeetVault` directory.
 
-### 2. Configure GitHub
+## 2. Configure GitHub
 
-1. Create a new GitHub repository (e.g., `LeetCode`).
-2. Generate a **Fine-grained Personal Access Token** with the following permissions:
-   - **Repository access:** Only select repositories (or your LeetCode repository)
-   - **Repository permissions:**
-     - **Contents:** Read and Write ✅
-3. Open the LeetVault extension popup.
-4. Enter your GitHub Username, Personal Access Token, and Repository Name.
-5. Click **Save**.
+### Step 1: Create a GitHub Repository
+
+Create a new repository where your LeetCode solutions will be stored.
+
+Example:
+
+```text
+LeetCode
+```
+
+---
+
+### Step 2: Generate a GitHub Personal Access Token
+
+1. Click your GitHub profile picture (top-right).
+2. Go to **Settings**.
+3. Scroll down and click **Developer settings**.
+4. Select **Personal access tokens**.
+5. Choose one of the following:
+   - **Fine-grained tokens** (Recommended)
+   - **Tokens (Classic)**
+
+---
+
+### Option A — Fine-grained Token (Recommended)
+
+1. Click **Generate new token**.
+2. Give it a name (e.g., `LeetVault`).
+3. Select an expiration date.
+4. Under **Repository access**, choose:
+
+```
+Only select repositories
+```
+
+5. Select your LeetCode repository.
+6. Under **Repository permissions**, enable:
+
+```
+Contents → Read and Write
+```
+
+7. Click **Generate token**.
+8. Copy the generated token.
+
+---
+
+### Option B — Classic Token
+
+1. Click **Generate new token (Classic)**.
+2. Give it a name.
+3. Select an expiration date.
+4. Enable the following scope:
+
+```
+repo
+```
+
+5. Click **Generate token**.
+6. Copy the generated token.
+
+---
+
+### Step 3: Configure LeetVault
+
+1. Open the LeetVault extension.
+2. Enter:
+   - GitHub Username
+   - Repository Name
+   - Personal Access Token
+3. Click **Save Settings**.
+
+You're done! 🎉
 
 ---
 
